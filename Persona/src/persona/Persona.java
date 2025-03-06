@@ -5,9 +5,9 @@ import java.util.Scanner;
 class Persona {
     protected String nombre;
     protected int edad;
-    protected double dni;
+    protected String dni;
     
-    public Persona(String nombre, int edad, double dni) {
+    public Persona(String nombre, int edad, String dni) {
         this.nombre = nombre;
         this.edad = edad;
         this.dni = dni;
@@ -29,11 +29,11 @@ class Persona {
         this.edad = edad;
     }
     
-    public double getDni() {
+    public String getDni() {
         return dni;
     }
     
-    public void setDni(double dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
     
@@ -43,7 +43,7 @@ class Persona {
         System.out.println("DNI: " + dni);
     }
     
- public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Bienvenido al menu");
@@ -51,14 +51,15 @@ class Persona {
         String nombreDoctor = scanner.nextLine();
         System.out.println("Ingrese edad del doctor: ");
         int edadDoctor = scanner.nextInt();
+        scanner.nextLine();  
         System.out.println("Ingrese el DNI del doctor: ");
-        double dniDoctor = scanner.nextDouble();
-        scanner.nextLine(); 
+        String dniDoctor = scanner.nextLine();  
         System.out.println("Ingrese especialidad del doctor: ");
         String especialidadDoctor = scanner.nextLine();
-        System.out.println("Ingrese universidad donde se graduó el doctor: ");
+        System.out.println("Ingrese universidad donde se graduo el doctor: ");
         String graduadoDoctor = scanner.nextLine();
         
+
         Doctor doctor = new Doctor(nombreDoctor, edadDoctor, dniDoctor, especialidadDoctor, graduadoDoctor);
         
         System.out.println("Bienvenido al menu");
@@ -66,15 +67,17 @@ class Persona {
         String nombreDeportista = scanner.nextLine();
         System.out.println("Ingrese la edad del deportista: ");
         int edadDeportista = scanner.nextInt();
-        System.out.println("Ingrese el DNI del deportista: ");
-        double dniDeportista = scanner.nextDouble();
         scanner.nextLine(); 
+        System.out.println("Ingrese el DNI del deportista: ");
+        String dniDeportista = scanner.nextLine();  
         System.out.println("Ingrese el deporte que practica: ");
         String deporteDeportista = scanner.nextLine();
         
+       
         Deportista deportista = new Deportista(nombreDeportista, edadDeportista, dniDeportista, deporteDeportista);
         
-        System.out.println("\nInformación ingresada:");
+       
+        System.out.println("\nInformacion ingresada:");
         doctor.mostrarInformacion();
         deportista.mostrarInformacion();
         
