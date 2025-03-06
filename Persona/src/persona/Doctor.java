@@ -5,7 +5,7 @@ class Doctor extends Persona {
     private String especialidad;
     private String graduado;
     
-    public Doctor(String nombre, int edad, int dni, String especialidad, String graduado) {
+    public Doctor(String nombre, int edad, String dni, String especialidad, String graduado) {
         super(nombre, edad, dni);
         this.especialidad = especialidad;
         this.graduado = graduado;
