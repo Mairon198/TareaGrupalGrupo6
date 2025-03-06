@@ -3,7 +3,7 @@ package persona;
 class Deportista extends Persona {
     private String deporte;
     
-    public Deportista(String nombre, int edad, double dni, String deporte) {
+    public Deportista(String nombre, int edad, String dni, String deporte) {
         super(nombre, edad, dni);
         this.deporte = deporte;
     }
